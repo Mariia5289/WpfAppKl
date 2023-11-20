@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppKl"
+        xmlns:DataModel="clr-namespace:WpfAppKl.DataModel" x:Class="WpfAppKl.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="437" Width="697" Loaded="Window_Loaded">
+    
+    <Grid>
+        <Label Content="Просмотр погоды" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Height="40"/>
+        <ScrollViewer Margin="10,70,10,70" VerticalScrollBarVisibility="Auto">
+            <WrapPanel x:Name ="WrapPanelWeather" Height="Auto" Width="Auto"/>
+        </ScrollViewer>
+        <Label x:Name ="labelLoad"  Content="Загрузка" HorizontalAlignment="Center" Margin="0,171,0,0" VerticalAlignment="Top" FontSize="20" Height="40"/>
+        <Button x:Name ="buttonMinus" Content="Прошлые 25" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Height="45" Width="100" Click="buttonMinus_Click"/>
+        <Button x:Name ="buttonPlus" Content="Следующие 25" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="45" Width="100" Click="buttonPlus_Click"/>
+
+    </Grid>
+</Window>
